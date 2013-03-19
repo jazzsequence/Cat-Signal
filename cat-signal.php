@@ -17,7 +17,7 @@ function idl_cats_in_yr_wp() {
 	// do html stuff
 	?>
 		<div class="wrap">
-			<?php screen_icon(); ?>
+			<?php screen_icon('cat-signal'); ?>
 			<h2><?php _e( 'Internet Defense League &mdash; Cat Signal', 'cat-signal' ); ?></h2>
 			<form method="POST" action="options.php">
 				<?php
@@ -112,3 +112,13 @@ function idl_signal_all_the_cats() {
 }
 add_action( 'wp_head', 'idl_signal_all_the_cats' );
 
+function idl_cat_icon() {
+    ?>
+    <style type="text/css" media="screen">
+        #icon-cat-signal {
+            background: url(<?php echo CAT_SIGNAL_PLUGIN_URL; ?>img/icon32.png) no-repeat!important;
+        }
+    </style>
+<?php
+}
+add_action( 'admin_head', 'idl_cat_icon' );
