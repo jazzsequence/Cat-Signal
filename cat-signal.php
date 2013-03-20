@@ -3,7 +3,7 @@
 Plugin Name: Cat Signal
 Plugin URI: https://github.com/jazzsequence/Cat-Signal
 Description: A WordPress plugin to easily display a banner or a modal alert when the Cat Signal (from the Internet Defense League) is active. For more information visit: http://internetdefenseleague.org/
-Version: 1.0
+Version: 1.0.1
 Author: Chris Reynolds
 Author URI: http://chrisreynolds.io
 License: GPLv3
@@ -45,7 +45,7 @@ function idl_cats_in_yr_menus() {
 add_action( 'admin_menu', 'idl_cats_in_yr_menus' );
 
 function idl_initialize_cats() {
-	register_setting( 'cat_signal_options', 'cat_signal' );
+	register_setting( 'cat_signal_options', 'cat_signal', 'idl_validate_teh_cats' );
 }
 add_action( 'admin_init', 'idl_initialize_cats' );
 
@@ -122,3 +122,10 @@ function idl_cat_icon() {
 <?php
 }
 add_action( 'admin_head', 'idl_cat_icon' );
+
+function idl_validate_teh_cats($input) {
+	if ( !array_key_exists( $input['type'], idl_all_the_cats() ) )
+		$input['type'] = $input['type'];
+
+	return $input;
+}
