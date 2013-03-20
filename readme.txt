@@ -28,8 +28,8 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 
 == Changelog ==
 
-=1.0.1=
+= 1.0.1 =
 Added validation function
 
-=1.0=
+= 1.0 =
 Initial release.
