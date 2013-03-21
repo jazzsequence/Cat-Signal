@@ -6,7 +6,7 @@ Donate link:https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id
 Tags: internet defense league, activism, cat signal, freedom, online activism  
 Requires at least: 2.7  
 Tested up to: 3.5.1  
-Stable tag: 1.0  
+Stable tag: 1.0.2  
 
 A WordPress plugin to automatically load either the modal or the banner Cat Signal when there is an active campaign from the Internet Defense League.
 
@@ -15,6 +15,13 @@ A WordPress plugin to automatically load either the modal or the banner Cat Sign
 The Internet Defense League is an online activist group organized to defend your online freedoms. When a bill is threatening to pass that would inhibit the way you live your online life, they put up the Cat Signal, a way to collectively black out or put notices on a large number of websites simultaneously.
 
 This plugin adds the javascript for the Cat Signal to your site so you don't need to mess with the code. It's enqueued like any other javascript file and has an options page to select either the banner or the modal window option.
+
+### About this plugin
+
+At first glance, it may appear that the plugin isn't doing anything because you don't have a banner or a modal window. *Don't panic!!!* What this means is that all is safe in Gotham and the Cat Signal has not been activated (read: there probably isn't an active IDL campaign running). To keep up to date on Internet Defense League campaigns, I recommend signing up for their mailing list (ed. note: I'm not affiliated with them at all, I'm just your friendly neighborhood internet activist). Once you're on the list, you'll get emails when they're about to launch a campaign.
+
+**So how do I know if it's working?**
+If you're savvy, you can check the HTML source of your site and check that either the `modal.js` or `banner.js` is loading. If it is, you're good to go, and the banner or modal window will work automagically when the IDL launch a new campaign.
 
 ## Installation
 
@@ -34,7 +41,10 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 
 ## Changelog
 
-**1.0.1**
+**1.0.2**  
+fixed js not loading issue
+
+**1.0.1**  
 added validation function
 
 **1.0**  
