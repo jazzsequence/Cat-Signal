@@ -124,7 +124,7 @@ function idl_cat_icon() {
 add_action( 'admin_head', 'idl_cat_icon' );
 
 function idl_validate_teh_cats($input) {
-	if ( !array_key_exists( $input['type'], idl_all_the_cats() ) )
+	if ( !array_key_exists( $input['type'], array('banner','modal') ) )
 		$input['type'] = $input['type'];
 
 	return $input;
