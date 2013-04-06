@@ -23,6 +23,10 @@ At first glance, it may appear that the plugin isn't doing anything because you 
 **So how do I know if it's working?**
 If you're savvy, you can check the HTML source of your site and check that either the `modal.js` or `banner.js` is loading. If it is, you're good to go, and the banner or modal window will work automagically when the IDL launch a new campaign.
 
+If you're not as savvy, you can use the handy-dandy test link on the Cat Signal options page. This will display a banner or modal in the style of the actual alert while not actually displaying a pretty banner or graphic.
+
+If you'd rather check manually, you can also add `?_idl_test=1` to the end of any page URL configured to display the alert and get the same test result.
+
 ## Installation
 
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
