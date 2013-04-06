@@ -76,6 +76,7 @@ function idl_do_signal_type_selection() {
 				<div class="alignleft">
 					<img src="<?php echo CAT_SIGNAL_PLUGIN_URL; ?>img/modal.png" alt="<?php _e( 'Modal', 'cat-signal' ); ?>" />
 					<p><?php _e( 'Modal', 'cat-signal' ); ?></p>
+				</div>
 			</td>
 		</tr>
 	<?php
