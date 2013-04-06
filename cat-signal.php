@@ -3,7 +3,7 @@
 Plugin Name: Cat Signal
 Plugin URI: https://github.com/jazzsequence/Cat-Signal
 Description: A WordPress plugin to easily display a banner or a modal alert when the Cat Signal (from the Internet Defense League) is active. For more information visit: http://internetdefenseleague.org/
-Version: 1.0.3
+Version: 1.0.4
 Author: Chris Reynolds
 Author URI: http://chrisreynolds.io
 License: GPLv3
@@ -99,6 +99,30 @@ function idl_do_signal_type_selection() {
 				</div>
 			</td>
 		</tr>
+		<tr valign="top"><th scope="row"><?php _e('Test it!', 'cat-signal'); ?></th>
+			<td>
+				<?php
+					$message = '';
+					if ( $options['location'] == 'all' || $options['location'] == 'front' || ( $options['location'] == 'other' && !$options['location-other'] ) ) {
+						$url = home_url() . '?_idl_test=1';
+					} elseif ( $options['location'] == 'other' && $options['location-other'] ) {
+						if ( is_numeric( $options['location-other'] ) ) {
+							$url = home_url() . '?p=' . $options['location-other'] . '&_idl_test=1';
+						} else {
+							$url = home_url() . '/' . $options['location-other'] . '?_idl_test=1';
+						}
+					} else {
+						$url = null;
+						$message = __( 'Woah there! I couldn\'t figure out what page you are loading your script on. Try saving your options again.', 'cat-signal' );
+					}
+					if ( $url ) {
+						echo sprintf( __( '%sRun the test on your site.%s', 'cat-signal' ), '<a href="' . $url . '" target="_blank">', '</a>' );
+					} else {
+						echo $message;
+					}
+				?>
+				<br />
+				<label class="description" for="cat_signal[test]"><?php _e( 'This will add a test parameter at the end of the URL to the page (or pages) that you have set to display the alert to make sure it\'s working correctly. If, for some reason, this link doesn\'t work, you can run the test manually by adding <code>?_idl_test=1</code> to the end of your url.', 'cat-signal' ); ?></label>
 	<?php
 	$cat_settings = ob_get_contents();
 	ob_end_clean();
