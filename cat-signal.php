@@ -67,6 +67,26 @@ function idl_do_signal_type_selection() {
 				</select>
 			</td>
 		</tr>
+		<tr valign="top"><th scope="row"><?php _e( 'Where should the Cat Signal display?', 'cat-signal' ); ?></th>
+			<td>
+				<select id="cat-location" name="cat_signal[location]">
+				<?php
+					if ( $options['location-other'] ) {
+						$options['location-other'] = wp_kses($options['location-other']);
+					} else {
+						$options['location-other'] = '';
+					}
+					$selected = $options['location'];
+					foreach ( idl_whar_is_cats() as $option ) {
+						$label = $option['label'];
+						$value = $option['value'];
+						echo '<option value="' . $value . '" ' . selected( $selected, $value ) . '>' . esc_attr($label) . '</option>';
+					}
+				?>
+				</select>
+				<p><?php _e( 'Other', 'cat-signal' ); ?>: <input type="text" id="cat-other-location" name="cat_signal[location-other]" width="15" value="<?php echo $options['location-other']; ?>" /><br />
+				<label class="description" for="cat_signal[location]"><?php _e( 'This controls where the alert (banner or modal) will display on your site. If you want to display it on all pages, use the "All pages" option. If you only want to display it on the home page (whether that\'s a static page or your main blog page), select Home/Front Page. If you\'d rather set a specific page, enter either the page ID or the page slug into the "Other" box and select "Other" from the dropdown.', 'cat-signal' ); ?></label></p>
+			</td>
 		<tr valign="top"><th scope="row"><?php _e( 'Screenshots', 'cat-signal' ); ?></th>
 			<td>
 				<div class="alignleft" style="margin-right: 20px;">
@@ -99,7 +119,52 @@ function idl_all_the_cats() {
 	return $cat_breeds;
 }
 
+function idl_whar_is_cats() {
+	$cat_locations = array(
+		'all' => array(
+			'value' => 'all',
+			'label' => __( 'All pages', 'cat-signal' )
+		),
+		'front' => array(
+			'value' => 'front',
+			'label' => __( 'Home/Front Page', 'cat-signal' )
+		),
+		'other' => array(
+			'value' => 'other',
+			'label' => __( 'Other page', 'cat-signal' )
+		)
+	);
+	return $cat_locations;
+}
+
 function idl_signal_all_the_cats() {
+	$options = get_option( 'cat_signal' );
+	switch( $options['location'] ) {
+		case 'all':
+			idl_all_the_cats_all_lined_up();
+			break;
+		case 'front':
+			if ( is_front_page() || is_home() ) {
+				idl_all_the_cats_all_lined_up();
+			}
+			break;
+		case 'other':
+			if ( $options['location-other'] ) {
+				if ( is_page( $options['location-other'] ) ) {
+					idl_all_the_cats_all_lined_up();
+				}
+			} else {
+				idl_all_the_cats_all_lined_up();
+			}
+			break;
+		default:
+			idl_all_the_cats_all_lined_up();
+	}
+
+}
+add_action( 'wp_head', 'idl_signal_all_the_cats' );
+
+function idl_all_the_cats_all_lined_up() {
 	$options = get_option( 'cat_signal' );
 	if ( !is_admin() ) {
 		if ( $options['type'] == 'banner' ) {
@@ -112,7 +177,6 @@ function idl_signal_all_the_cats() {
 		}
 	}
 }
-add_action( 'wp_head', 'idl_signal_all_the_cats' );
 
 function idl_cat_icon() {
     ?>
@@ -128,6 +192,9 @@ add_action( 'admin_head', 'idl_cat_icon' );
 function idl_validate_teh_cats($input) {
 	if ( !array_key_exists( $input['type'], array('banner','modal') ) )
 		$input['type'] = $input['type'];
+	if ( !array_key_exists( $input['location'], idl_whar_is_cats() ) )
+		$input['location'] = $input['location'];
+	$input['location-other'] = wp_filter_nohtml_kses( $input['location-other'] );
 
 	return $input;
 }
