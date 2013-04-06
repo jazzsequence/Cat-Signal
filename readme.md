@@ -41,14 +41,19 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 
 ## Changelog
 
+**1.0.4**  
+- Fixed open `<div>` tag  
+- added an option to define where the alert appears  
+- added link to test that the script is working  
+
 **1.0.3**  
-Removed `die` function that was making the page quit if no option was set. Reported [here](http://wordpress.org/support/topic/not-working-on-my-site-3) and [here](http://wordpress.org/support/topic/indexphp-quits-after-wordpress-meta-tag).
+- Removed `die` function that was making the page quit if no option was set. Reported [here](http://wordpress.org/support/topic/not-working-on-my-site-3) and [here](http://wordpress.org/support/topic/indexphp-quits-after-wordpress-meta-tag).
 
 **1.0.2**  
-Changed how the validation pulled the options
+- Changed how the validation pulled the options
 
 **1.0.1**  
-added validation function
+- added validation function
 
 **1.0**  
-Initial release.
+- Initial release.
