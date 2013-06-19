@@ -1,12 +1,12 @@
 ![cat signal](http://internetdefenseleague.org/images/vector/city_bat_signal.png)
 #Internet Defense League Cat Signal
 
-Contributors: jazzs3quence  
-Donate link:https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AWM2TG  
-Tags: internet defense league, activism, cat signal, freedom, online activism  
-Requires at least: 2.7  
-Tested up to: 3.5.1  
-Stable tag: 1.0.4  
+Contributors: jazzs3quence
+Donate link:https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AWM2TG
+Tags: internet defense league, activism, cat signal, freedom, online activism
+Requires at least: 2.7
+Tested up to: 3.5.1
+Stable tag: 1.0.4
 
 A WordPress plugin to automatically load either the modal or the banner Cat Signal when there is an active campaign from the Internet Defense League.
 
@@ -33,31 +33,34 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 
 ## Screenshots
 
-![modal window](https://github.com/jazzsequence/Cat-Signal/raw/master/screenshot-1.png)  
+![modal window](https://github.com/jazzsequence/Cat-Signal/raw/master/screenshot-1.png)
 1. Modal option
 
-![banner](https://raw.github.com/jazzsequence/Cat-Signal/master/screenshot-2.png)  
+![banner](https://raw.github.com/jazzsequence/Cat-Signal/master/screenshot-2.png)
 2. Banner option
 
-![options page](https://raw.github.com/jazzsequence/Cat-Signal/master/screenshot-3.png)  
+![options page](https://raw.github.com/jazzsequence/Cat-Signal/master/screenshot-3.png)
 3. Options page
 
 
 ## Changelog
 
-**1.0.4**  
-- Fixed open `<div>` tag  
-- added an option to define where the alert appears  
-- added link to test that the script is working  
+**1.0.5**
+- fixes validation _doing_it_wrong()
 
-**1.0.3**  
+**1.0.4**
+- Fixed open `<div>` tag
+- added an option to define where the alert appears
+- added link to test that the script is working
+
+**1.0.3**
 - Removed `die` function that was making the page quit if no option was set. Reported [here](http://wordpress.org/support/topic/not-working-on-my-site-3) and [here](http://wordpress.org/support/topic/indexphp-quits-after-wordpress-meta-tag).
 
-**1.0.2**  
+**1.0.2**
 - Changed how the validation pulled the options
 
-**1.0.1**  
+**1.0.1**
 - added validation function
 
-**1.0**  
+**1.0**
 - Initial release.
