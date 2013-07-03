@@ -3,7 +3,7 @@
 Plugin Name: Cat Signal
 Plugin URI: https://github.com/jazzsequence/Cat-Signal
 Description: A WordPress plugin to easily display a banner or a modal alert when the Cat Signal (from the Internet Defense League) is active. For more information visit: http://internetdefenseleague.org/
-Version: 1.0.5
+Version: 1.0.6
 Author: Chris Reynolds
 Author URI: http://chrisreynolds.io
 License: GPLv3
@@ -33,7 +33,7 @@ function idl_cats_in_yr_wp() {
 				<input type="hidden" name="ap-core-settings-submit" value="Y" />
 			</form>
 			<div style="width: 100%; text-align: center; margin-top: 20px;">
-				<a href="http://internetdefenseleague.org/" target="_blank"><img src="http://internetdefenseleague.org/images/vector/IDL_type_logo.png" alt="<?php _e('The Internet Defense League', 'cat-signal'); ?>" /></a>
+				<a href="http://internetdefenseleague.org/" target="_blank"><img src="<?php echo CAT_SIGNAL_PLUGIN_URL; ?>/img/IDL_type_logo.png" alt="<?php _e('The Internet Defense League', 'cat-signal'); ?>" /></a>
 			</div>
 		</div>
 	<?php
@@ -214,7 +214,7 @@ function idl_cat_icon() {
 add_action( 'admin_head', 'idl_cat_icon' );
 
 function idl_validate_teh_cats($input) {
-	if ( !array_key_exists( $input['type'], array('banner','modal') ) )
+	if ( !array_key_exists( $input['type'], idl_all_the_cats() ) )
 		$input['type'] = null;
 	if ( !array_key_exists( $input['location'], idl_whar_is_cats() ) )
 		$input['location'] = null;
