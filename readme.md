@@ -5,13 +5,10 @@ Contributors: jazzs3quence
 Donate link:https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AWM2TG
 Tags: internet defense league, activism, cat signal, freedom, online activism
 Requires at least: 2.7
-Tested up to: 3.5.1
-Stable tag: 1.0.6
+Tested up to: 3.8.1
+Stable tag: 1.0.7
 
 A WordPress plugin to automatically load either the modal or the banner Cat Signal when there is an active campaign from the Internet Defense League.
-
-** Update July 3, 2013 **
-The Cat Signal is being raised on July 4th to support the 4th Amendment and oppose NSA internet surveillance. If you have this plugin installed, all you need to do is activate it and you will display your banner on your site. You can also [join the Thunderclap](https://www.thunderclap.it/projects/2594-july-4th-protest-nsa-spying) and spread the word on Facebook and Twitter. You can find out more information about this protest on [Restore the Fourth](http://www.restorethefourth.net/), [stopwatching.us](https://optin.stopwatching.us/) and [Fight for the Future](https://cms.fightforthefuture.org/july-4th-celebrate-4th-amendment-post-it-everywhere/).
 
 ## Description
 
