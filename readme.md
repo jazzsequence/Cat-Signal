@@ -27,6 +27,9 @@ If you're not as savvy, you can use the handy-dandy test link on the Cat Signal 
 
 If you'd rather check manually, you can also add `?_idl_test=1` to the end of any page URL configured to display the alert and get the same test result.
 
+**1.0.7 adds a new widget for the [Stop the Secrecy](https://openmedia.org/stopthesecrecy/resources) campaign. The code provided for this campaign adds a tall petition widget that is not responsive and the dimensions cannot be changed. Please be aware of this when chosing this option from the Cat Signal settings.**
+
+
 ## Installation
 
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
@@ -44,6 +47,8 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 
 
 ## Changelog
+**1.0.7**
+- added widget for [Stop the Secrecy](https://openmedia.org/stopthesecrecy/resources) campaign. May be used later for other campaigns.
 
 **1.0.6**
 - fixed banner/modal bug (saved option was getting stripped in the validation function)
