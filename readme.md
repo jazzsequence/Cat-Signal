@@ -27,6 +27,12 @@ If you're not as savvy, you can use the handy-dandy test link on the Cat Signal 
 
 If you'd rather check manually, you can also add `?_idl_test=1` to the end of any page URL configured to display the alert and get the same test result.
 
+**1.1**
+- removed Stop the Secrecy option
+- removed the idl_test (temporarily, see [developer thread](https://groups.google.com/d/msg/internetdefenseleague/7OWDjdEDwJ0/HX1MBpjnbr8J))
+- tested with WordPress 4.0
+- added plugin icon
+
 **1.0.9**
 - fixed the fatal error on activation for PHP < 5.3
 
