@@ -23,21 +23,7 @@ At first glance, it may appear that the plugin isn't doing anything because you 
 **So how do I know if it's working?**
 If you're savvy, you can check the HTML source of your site and check that either the `modal.js` or `banner.js` is loading. If it is, you're good to go, and the banner or modal window will work automagically when the IDL launch a new campaign.
 
-If you're not as savvy, you can use the handy-dandy test link on the Cat Signal options page. This will display a banner or modal in the style of the actual alert while not actually displaying a pretty banner or graphic.
-
-If you'd rather check manually, you can also add `?_idl_test=1` to the end of any page URL configured to display the alert and get the same test result.
-
-**1.1**
-- removed Stop the Secrecy option
-- removed the idl_test (temporarily, see [developer thread](https://groups.google.com/d/msg/internetdefenseleague/7OWDjdEDwJ0/HX1MBpjnbr8J))
-- tested with WordPress 4.0
-- added plugin icon
-
-**1.0.9**
-- fixed the fatal error on activation for PHP < 5.3
-
-**1.0.8 adds a new widget for the [Stop the Secrecy](https://openmedia.org/stopthesecrecy/resources) campaign. The code provided for this campaign adds a tall petition widget that is not responsive and the dimensions cannot be changed. Please be aware of this when chosing this option from the Cat Signal settings.**
-
+You can also add `?_idl_test=1` to the end of any page URL configured to display the alert. This will display a banner or modal in the style of the actual alert while not actually displaying a pretty banner or graphic.
 
 ## Installation
 
@@ -56,6 +42,12 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 
 
 ## Changelog
+**1.1**
+- removed Stop the Secrecy option
+- removed the idl_test (temporarily, see [developer thread](https://groups.google.com/d/msg/internetdefenseleague/7OWDjdEDwJ0/HX1MBpjnbr8J))
+- tested with WordPress 4.0
+- added plugin icon
+
 **1.0.9**
 - fixed the fatal error on activation for PHP < 5.3
 
