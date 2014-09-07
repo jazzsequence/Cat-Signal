@@ -14,6 +14,8 @@ The Internet Defense League is an online activist group organized to defend your
 
 This plugin adds the javascript for the Cat Signal to your site so you don't need to mess with the code. It's enqueued like any other javascript file and has an options page to select either the banner or the modal window option.
 
+The current action centers around the Internet Slowdown campaign, to protest against cable companies that want to inhibit your browsing experience by enabling a "fast-lane" where service providers (like YouTube and Netflix) get priority access to faster speeds for a fee. Learn more on the [Battle for the Net](https://www.battleforthenet.com/sept10th/) site. This campaign will run for one day on September 10th.
+
 = About the plugin =
 
 At first glance, it may appear that the plugin isn't doing anything because you don't have a banner or a modal window. *Don't panic!!!* What this means is that all is safe in Gotham and the Cat Signal has not been activated (read: there probably isn't an active IDL campaign running). To keep up to date on Internet Defense League campaigns, I recommend signing up for their mailing list (ed. note: I'm not affiliated with them at all, I'm just your friendly neighborhood internet activist). Once you're on the list, you'll get emails when they're about to launch a campaign.
