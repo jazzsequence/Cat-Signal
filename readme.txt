@@ -1,6 +1,6 @@
 === Internet Defense League Cat Signal ===
 Contributors: jazzs3quence
-Donate link: https://coinbase.com/checkouts/64d7bc3204fb355ff92f4c47b48cfa87
+Donate link: https://www.paypal.me/jazzsequence
 Tags: internet defense league, activism, cat signal, freedom, online activism
 Requires at least: 2.7
 Tested up to: 4.8
@@ -59,7 +59,9 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 = 1.1.2 =
 - Compatibility bump
 - Added FAQ
-- Remove http check from js code (per changes by IDL)
+- Remove http check from js code
+- Tweaked js
+- Updated readmes
 
 = 1.1.1 =
 - version bump, no major changes
