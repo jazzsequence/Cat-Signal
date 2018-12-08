@@ -3,8 +3,8 @@ Contributors: jazzs3quence
 Donate link: https://www.paypal.me/jazzsequence
 Tags: internet defense league, activism, cat signal, freedom, online activism
 Requires at least: 2.7
-Tested up to: 4.8
-Stable tag: 1.1.2
+Tested up to: 5.0
+Stable tag: 1.1.3
 
 A WordPress plugin to automatically load either the modal or the banner Cat Signal when there is an active campaign from the Internet Defense League.
 
@@ -35,9 +35,9 @@ The Cat Signal plugin is what could be considered [“complete software”](http
 
 **How do I know if it's working?**
 
-If you're savvy, you can check the HTML source of your site and check that either the `modal.js` or `banner.js` is loading. If it is, you're good to go, and the banner or modal window will work automagically when the IDL launch a new campaign.
+If you're savvy, you can check the HTML source of your site and check that either the `modal.js` is loading. If it is, you're good to go, and the banner or modal window will work automagically when the IDL launch a new campaign.
 
-You can also add `?_idl_test=1` to the end of any page URL configured to display the alert. This will display a banner or modal in the style of the actual alert while not actually displaying a pretty banner or graphic.
+The `?_idl_test=1` test URL is no longer supported, sadly.
 
 
 == Installation ==
@@ -48,13 +48,19 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 
 1. Modal option
 
-2. Banner option
-
-3. Options page
+2. Options page
 
 == Upgrade Notice ==
 
+= 1.1.3 =
+- Removed support for banner option (does not appear to be used anymore).
+
 == Changelog ==
+
+= 1.1.3 =
+- Tested on WordPress 5.0
+- Removed banner option (no longer used)
+- Updated modal javascript
 
 = 1.1.2 =
 - Compatibility bump

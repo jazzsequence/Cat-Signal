@@ -5,8 +5,8 @@ Contributors: jazzs3quence
 Donate link: https://www.paypal.me/jazzsequence  
 Tags: internet defense league, activism, cat signal, freedom, online activism  
 Requires at least: 2.7  
-Tested up to: 4.8  
-Stable tag: 1.1.2  
+Tested up to: 5.0  
+Stable tag: 1.1.3  
 
 A WordPress plugin to automatically load either the modal or the banner Cat Signal when there is an active campaign from the Internet Defense League.
 
@@ -34,9 +34,9 @@ The Cat Signal plugin is what could be considered [“complete software”](http
 
 **How do I know if it's working?**
 
-If you're savvy, you can check the HTML source of your site and check that either the `modal.js` or `banner.js` is loading. If it is, you're good to go, and the banner or modal window will work automagically when the IDL launch a new campaign.
+If you're savvy, you can check the HTML source of your site and check that either the `modal.js` is loading. If it is, you're good to go, and the banner or modal window will work automagically when the IDL launch a new campaign.
 
-You can also add `?_idl_test=1` to the end of any page URL configured to display the alert. This will display a banner or modal in the style of the actual alert while not actually displaying a pretty banner or graphic.
+The `?_idl_test=1` test URL is no longer supported, sadly.
 
 ## Installation
 
@@ -47,56 +47,58 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 ![modal window](https://github.com/jazzsequence/Cat-Signal/raw/master/screenshot-1.png)  
 1. Modal option
 
-![banner](https://raw.github.com/jazzsequence/Cat-Signal/master/screenshot-2.png)  
-2. Banner option
-
-![options page](https://raw.github.com/jazzsequence/Cat-Signal/master/screenshot-3.png)  
-3. Options page
+![options page](https://raw.github.com/jazzsequence/Cat-Signal/master/screenshot-2.png)  
+2. Options page
 
 
 ## Changelog
-**1.1.2**
-- Compatibility bump
-- Added FAQ
-- Remove http check from js code
-- Tweaked js
+**1.1.3**  
+- Tested on WordPress 5.0  
+- Removed banner option (no longer used)  
+- Updated modal javascript
+
+**1.1.2**  
+- Compatibility bump  
+- Added FAQ  
+- Remove http check from js code  
+- Tweaked js  
 - Updated readmes
 
-**1.1.1**
+**1.1.1**  
 - version bump, no major changes
 
-**1.1**
-- removed Stop the Secrecy option
-- removed the idl_test (temporarily, see [developer thread](https://groups.google.com/d/msg/internetdefenseleague/7OWDjdEDwJ0/HX1MBpjnbr8J))
-- tested with WordPress 4.0
+**1.1**  
+- removed Stop the Secrecy option  
+- removed the idl_test (temporarily, see [developer thread](https://groups.google.com/d/msg/internetdefenseleague/7OWDjdEDwJ0/HX1MBpjnbr8J))  
+- tested with WordPress 4.0  
 - added plugin icon
 
-**1.0.9**
+**1.0.9**  
 - fixed the fatal error on activation for PHP < 5.3
 
-**1.0.8**
+**1.0.8**  
 - added widget for [Stop the Secrecy](https://openmedia.org/stopthesecrecy/resources) campaign. May be used later for other campaigns.
 
-**1.0.6**
-- fixed banner/modal bug (saved option was getting stripped in the validation function)
+**1.0.6**  
+- fixed banner/modal bug (saved option was getting stripped in the validation function)  
 - moved IDL banner locally
 
-**1.0.5**
+**1.0.5**  
 - fixes validation _doing_it_wrong()
 
-**1.0.4**
-- Fixed open `<div>` tag
-- added an option to define where the alert appears
+**1.0.4**  
+- Fixed open `<div>` tag  
+- added an option to define where the alert appears  
 - added link to test that the script is working
 
-**1.0.3**
+**1.0.3**  
 - Removed `die` function that was making the page quit if no option was set. Reported [here](http://wordpress.org/support/topic/not-working-on-my-site-3) and [here](http://wordpress.org/support/topic/indexphp-quits-after-wordpress-meta-tag).
 
-**1.0.2**
+**1.0.2**  
 - Changed how the validation pulled the options
 
-**1.0.1**
+**1.0.1**  
 - added validation function
 
-**1.0**
+**1.0**  
 - Initial release.
