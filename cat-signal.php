@@ -205,16 +205,23 @@ add_action( 'wp_head', 'idl_signal_all_the_cats' );
 
 function idl_all_the_cats_all_lined_up() {
 	global $cat_signal_options;
-	if ( !is_admin() ) {
+	if ( ! is_admin() ) {
+		wp_enqueue_script( 'idf-modal', CAT_SIGNAL_PLUGIN_URL . 'js/modal.js', array(), '1.0', false );
+
+		/*
+		 * Other Cat Signal types have been deprecated. Keeping here for historic purposes or
+		 * if they come back (which they won't).
+
 		if ( $cat_signal_options['type'] == 'banner' ) {
 			wp_enqueue_script( 'idf-banner', CAT_SIGNAL_PLUGIN_URL . 'js/banner.js', array(), '1.0', false );
-		/*} elseif ( $cat_signal_options['type'] == 'special' ) { // used for special, one-time campaigns
+		} elseif ( $cat_signal_options['type'] == 'special' ) { // used for special, one-time campaigns
 			$code = '';
-			printf( $code );*/
+			printf( $code );
 		} else {
 			// if nothing has been set, default to modal.
 			wp_enqueue_script( 'idf-modal', CAT_SIGNAL_PLUGIN_URL . 'js/modal.js', array(), '1.0', false );
 		}
+		*/
 	}
 }
 
