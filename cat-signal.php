@@ -95,10 +95,10 @@ function idl_do_signal_type_selection() {
 			</td>
 		<tr valign="top"><th scope="row"><?php _e( 'Screenshots', 'cat-signal' ); ?></th>
 			<td>
-				<div class="alignleft" style="margin-right: 20px;">
+				<!--<div class="alignleft" style="margin-right: 20px;">
 					<img src="<?php echo CAT_SIGNAL_PLUGIN_URL; ?>img/banner.png" alt="<?php _e( 'Banner', 'cat-signal' ); ?>" />
 					<p><?php _e( 'Banner', 'cat-signal' ); ?></p>
-				</div>
+				</div>-->
 				<div class="alignleft" style="margin-right: 20px;">
 					<img src="<?php echo CAT_SIGNAL_PLUGIN_URL; ?>img/modal.png" alt="<?php _e( 'Modal', 'cat-signal' ); ?>" />
 					<p><?php _e( 'Modal', 'cat-signal' ); ?></p>
@@ -145,15 +145,15 @@ function idl_all_the_cats() {
 		/*'special' => array(
 			'value' => 'special',
 			'label' => __( 'Stop the Secrecy', 'cat-signal' )
-		),*/
+		),
 		'banner' => array(
 			'value' => 'banner',
 			'label' => __( 'Banner', 'cat-signal' )
-		),
+		),*/
 		'modal' => array(
 			'value' => 'modal',
-			'label' => __( 'Modal', 'cat-signal' )
-		)
+			'label' => __( 'Modal', 'cat-signal' ),
+		),
 	);
 	return $cat_breeds;
 }
