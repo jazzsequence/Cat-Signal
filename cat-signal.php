@@ -66,11 +66,11 @@ function idl_do_signal_type_selection() {
 					}
 				?>
 				</select>
-				<p>
+				<!-- <p>
 					<label type="description" for="cat_signal[type]"><small>
 						<?php _e( 'If Stop the Secrecy option is selected, the modal Cat Signal will be selected for any other campaigns and a Stop the Secrecy widget will appear on your <a href="widgets.php">Widgets</a> page. <strong>Important Note:</strong> The dimensions of this widget/petition cannot be changed. This means that the widget might not look good on all themes. If this is the case for you, you can <a href="https://openmedia.org/stopthesecrecy/resources">get the code</a> and add it somewhere else on your site.', 'cat-signal' ); ?>
 					</small></label>
-				</p>
+				</p>-->
 			</td>
 		</tr>
 		<tr valign="top"><th scope="row"><?php _e( 'Where should the Cat Signal display?', 'cat-signal' ); ?></th>
